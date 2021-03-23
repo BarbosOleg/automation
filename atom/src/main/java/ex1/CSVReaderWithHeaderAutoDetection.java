@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CSVReaderWithHeaderAutoDetection {
-    private static final String SAMPLE_CSV_FILE_PATH = "fl1.csv";
+    private static final String SAMPLE_CSV_FILE_PATH = "test_file.csv";
 
     public static void main(String[] args) throws IOException {
         try (

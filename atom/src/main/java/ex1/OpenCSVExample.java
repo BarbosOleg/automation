@@ -11,7 +11,7 @@ public class OpenCSVExample {
         try
         {
             //Get the CSVReader instance with specifying the delimiter to be used
-            reader = new CSVReader(new FileReader("tts.csv")); //,','); --- constructor deprecated
+            reader = new CSVReader(new FileReader("test_file.csv")); //,','); --- constructor deprecated
             String [] nextLine;
             //Read one line at a time
             while ((nextLine = reader.readNext()) != null)

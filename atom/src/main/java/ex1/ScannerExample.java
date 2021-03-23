@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ScannerExample {
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner scanner = new Scanner(new File("fl1.csv"));
+        Scanner scanner = new Scanner(new File("test_file.csv"));
 
         //Set the delimiter used in file
         scanner.useDelimiter(",");// \\|

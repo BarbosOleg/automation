@@ -8,7 +8,7 @@ public class SplitterExample {
     public static void main(String[] args)
     {
         //Input file which needs to be parsed
-        String fileToParse = "fl1.csv";
+        String fileToParse = "test_file.csv";
         BufferedReader fileReader = null;
 
         //Delimiter used in CSV file

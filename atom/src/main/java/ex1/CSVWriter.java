@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class CSVWriter {
-    private static final String SAMPLE_CSV_FILE = "fl1.csv";
+    private static final String SAMPLE_CSV_FILE = "test_file.csv";
 
     public static void main(String[] args) throws IOException {
         try (
@@ -22,7 +22,7 @@ public class CSVWriter {
             csvPrinter.printRecord("2", "Barbos Oleg", "USM", "student","Genshin Impact");
             csvPrinter.printRecord("3", "Spinu Dan", "USM", "student","Genshin Impact");
 
-            csvPrinter.printRecord(Arrays.asList("5", "Diminet Ion", "USM", "student","Genshin Impact"));
+            csvPrinter.printRecord(Arrays.asList("4", "Diminet Ion", "USM", "student","Genshin Impact"));
 
             csvPrinter.flush();
         }
