@@ -38,10 +38,10 @@ public class CreateXmlFileDemo {
                         Attr attr1 = doc.createAttribute("plantID");
                         attr1.setValue("101");
                         plant.setAttributeNode(attr1);
-                            //t1 - common
-                            Element common = doc.createElement("common");
-                            common.appendChild(doc.createTextNode("Bloodroot"));
-                            plant.appendChild(common);
+                            //t1 - plantName
+                            Element plantName = doc.createElement("plantName");
+                            plantName.appendChild(doc.createTextNode("Bloodroot"));
+                            plant.appendChild(plantName);
                             //t2 - botanical
                             Element botanical = doc.createElement("botanical");
                             botanical.appendChild(doc.createTextNode("Sanguinaria canadensis"));
@@ -62,10 +62,10 @@ public class CreateXmlFileDemo {
                         Attr attr2 = doc.createAttribute("plantID");
                         attr2.setValue("102");
                         plant2.setAttributeNode(attr2);
-                            //t1 - common
-                            Element common2 = doc.createElement("common");
-                            common2.appendChild(doc.createTextNode("Columbine"));
-                            plant2.appendChild(common2);
+                            //t1 - plantName
+                            Element plantName2 = doc.createElement("plantName");
+                            plantName2.appendChild(doc.createTextNode("Columbine"));
+                            plant2.appendChild(plantName2);
                             //t2 - botanical
                             Element botanical2 = doc.createElement("botanical");
                             botanical2.appendChild(doc.createTextNode("Aquilegia canadensis"));
@@ -85,10 +85,10 @@ public class CreateXmlFileDemo {
                         Attr attr3 = doc.createAttribute("plantID");
                         attr3.setValue("103");
                         plant3.setAttributeNode(attr3);
-                            //t1 - common
-                            Element common3 = doc.createElement("common");
-                            common3.appendChild(doc.createTextNode("Marsh Marigold"));
-                            plant3.appendChild(common3);
+                            //t1 - plantName
+                            Element plantName3 = doc.createElement("plantName");
+                            plantName3.appendChild(doc.createTextNode("Marsh Marigold"));
+                            plant3.appendChild(plantName3);
                             //t2 - botanical
                             Element botanical3 = doc.createElement("botanical");
                             botanical3.appendChild(doc.createTextNode("Caltha palustris"));
