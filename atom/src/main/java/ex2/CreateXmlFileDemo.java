@@ -15,71 +15,98 @@ public class CreateXmlFileDemo {
     public static void main(String argv[]) {
 
         try {
-            DocumentBuilderFactory dbFactory =
-                    DocumentBuilderFactory.newInstance();
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.newDocument();
 
-            // root element
-            Element rootElement = doc.createElement("tag0");
+            // tag0 - catalog
+            Element rootElement = doc.createElement("catalog");
             doc.appendChild(rootElement);
 
-            // supercars element
-            Element supercar = doc.createElement("tag1");
-            rootElement.appendChild(supercar);
+                    // tag1 - category
+                    Element category = doc.createElement("category");
+                    rootElement.appendChild(category);
 
-            // setting attribute to element
-            Attr attr = doc.createAttribute("company");
-            attr.setValue("Ferrari");
-            supercar.setAttributeNode(attr);
+                    Attr attr = doc.createAttribute("section");
+                    attr.setValue("plants");
+                    category.setAttributeNode(attr);
 
+                        //tag2 - plant
+                        Element plant = doc.createElement("plant");
+                        category.appendChild(plant);
 
-            Element a = doc.createElement("tag2");
-            supercar.appendChild(a);
+                        Attr attr1 = doc.createAttribute("plantID");
+                        attr1.setValue("101");
+                        plant.setAttributeNode(attr1);
+                            //t1 - common
+                            Element common = doc.createElement("common");
+                            common.appendChild(doc.createTextNode("Bloodroot"));
+                            plant.appendChild(common);
+                            //t2 - botanical
+                            Element botanical = doc.createElement("botanical");
+                            botanical.appendChild(doc.createTextNode("Sanguinaria canadensis"));
+                            plant.appendChild(botanical);
+                            //t3 - zone
+                            Element zone = doc.createElement("zone");
+                            zone.appendChild(doc.createTextNode("3"));
+                            plant.appendChild(zone);
+                            //t4 - price
+                            Element price = doc.createElement("price");
+                            price.appendChild(doc.createTextNode("$2.44"));
+                            plant.appendChild(price);
 
-            Attr attr1 = doc.createAttribute("company");
-            attr1.setValue("ff");
-            a.setAttributeNode(attr1);
+                        //tag2 - plant
+                        Element plant2 = doc.createElement("plant");
+                        category.appendChild(plant2);
 
-            Element cc = doc.createElement("t1");
-            Attr at2 = doc.createAttribute("type");
-            at2.setValue("formula one");
-            cc.setAttributeNode(at2);
-            cc.appendChild(doc.createTextNode("Ferrari 101"));
-            a.appendChild(cc);
+                        Attr attr2 = doc.createAttribute("plantID");
+                        attr2.setValue("102");
+                        plant2.setAttributeNode(attr2);
+                            //t1 - common
+                            Element common2 = doc.createElement("common");
+                            common2.appendChild(doc.createTextNode("Columbine"));
+                            plant2.appendChild(common2);
+                            //t2 - botanical
+                            Element botanical2 = doc.createElement("botanical");
+                            botanical2.appendChild(doc.createTextNode("Aquilegia canadensis"));
+                            plant2.appendChild(botanical2);
+                            //t3 - zone
+                            Element zone2 = doc.createElement("zone");
+                            zone2.appendChild(doc.createTextNode("4"));
+                            plant2.appendChild(zone2);
+                            //t4 - price
+                            Element price2 = doc.createElement("price");
+                            price2.appendChild(doc.createTextNode("$9.37"));
+                            plant2.appendChild(price2);
+                        //tag2 - plant
+                        Element plant3 = doc.createElement("plant");
+                        category.appendChild(plant3);
 
-            Element cc1 = doc.createElement("t2");
-            Attr at22 = doc.createAttribute("type");
-            at22.setValue("formula one");
-            cc1.setAttributeNode(at22);
-            cc1.appendChild(doc.createTextNode("Ferrari 102"));
-            a.appendChild(cc1);
-
-
-            Element c = doc.createElement("list");
-
-            a.appendChild(c);
-
-            Element l1 = doc.createElement("t3");
-            Attr al = doc.createAttribute("type");
-            al.setValue("one");
-            l1.setAttributeNode(al);
-            l1.appendChild(doc.createTextNode("Ferrari 103"));
-            c.appendChild(l1);
-
-            Element l2 = doc.createElement("t4");
-            Attr a2 = doc.createAttribute("type");
-            a2.setValue("one");
-            l2.setAttributeNode(a2);
-            l2.appendChild(doc.createTextNode("Ferrari 104"));
-            c.appendChild(l2);
-
+                        Attr attr3 = doc.createAttribute("plantID");
+                        attr3.setValue("103");
+                        plant3.setAttributeNode(attr3);
+                            //t1 - common
+                            Element common3 = doc.createElement("common");
+                            common3.appendChild(doc.createTextNode("Marsh Marigold"));
+                            plant3.appendChild(common3);
+                            //t2 - botanical
+                            Element botanical3 = doc.createElement("botanical");
+                            botanical3.appendChild(doc.createTextNode("Caltha palustris"));
+                            plant3.appendChild(botanical3);
+                            //t3 - zone
+                            Element zone3 = doc.createElement("zone");
+                            zone3.appendChild(doc.createTextNode("4"));
+                            plant3.appendChild(zone3);
+                            //t4 - price
+                            Element price3 = doc.createElement("price");
+                            price3.appendChild(doc.createTextNode("$6.81"));
+                            plant3.appendChild(price3);
 
             // write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("ttds.xml"));
+            StreamResult result = new StreamResult(new File("plants.xml"));
             transformer.transform(source, result);
 
             // Output to console for testing
