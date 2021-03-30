@@ -8,4 +8,16 @@
             <price>$2.44</price>
         </plant>
         <plant plantID="102">
-            <plantName>Columbine</plantName><botanical>Aquilegia canadensis</botanical><zone>4</zone><price>$9.37</price></plant><plant plantID="103"><plantName>Marsh Marigold</plantName><botanical>Caltha palustris</botanical><zone>4</zone><price>$6.81</price></plant></category></catalog>
+            <plantName>Columbine</plantName>
+            <botanical>Aquilegia canadensis</botanical>
+            <zone>4</zone>
+            <price>$9.37</price>
+        </plant>
+        <plant plantID="103">
+            <plantName>Marsh Marigold</plantName>
+            <botanical>Caltha palustris</botanical>
+            <zone>4</zone>
+            <price>$6.81</price>
+        </plant>
+    </category>
+</catalog>
